@@ -1,0 +1,32 @@
+{
+  "name": "fdating-profile-collector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kal9Isa/fdating-profile-collector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kal9Isa/fdating-profile-collector/issues"
+  },
+  "homepage": "https://github.com/Kal9Isa/fdating-profile-collector#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bullmq": "^1.43.0",
+    "cheerio": "^1.0.0-rc.10",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.2.1",
+    "@types/node": "^16.7.1",
+    "@types/cheerio": "^0.22.30",
+    "@types/minimist": "^1.2.2"
+  }
+}
