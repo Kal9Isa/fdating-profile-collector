@@ -19,14 +19,14 @@
   "homepage": "https://github.com/Kal9Isa/fdating-profile-collector#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "bullmq": "^1.43.0",
     "cheerio": "^1.0.0-rc.10",
     "minimist": "^1.2.5"
   },
   "devDependencies": {
-    "ts-node": "^10.2.1",
-    "@types/node": "^16.7.1",
     "@types/cheerio": "^0.22.30",
-    "@types/minimist": "^1.2.2"
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^16.7.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
   }
 }
