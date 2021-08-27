@@ -1,6 +1,6 @@
 import { redisClient } from '../interfaces/redis-connector';
 
-export const saveSearchInfo = async (
+export const saveLinks = async (
   links: object,
   searchIndex: number
 ): Promise<void> => {
