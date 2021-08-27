@@ -20,6 +20,8 @@ export const searchPageParser = (payload: AxiosResponse): SearchInfo => {
 
   resultInfo = [...new Set(resultInfo)];
 
+  console.log(resultInfo);
+
   return {
     totalCandidates: resultInfo[0],
     searchIndex: resultInfo[1],
