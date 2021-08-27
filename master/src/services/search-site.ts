@@ -4,7 +4,7 @@ import { fdatingParams } from './get-params';
 export const searchSite = async (
   url: string,
   filters: fdatingParams
-): Promise<AxiosResponse | void> => {
+): Promise<AxiosResponse> => {
   // https://fdating.com/search?do=Search;gender=1;ageFrom=18;ageTo=99;photo=true;
   const { gender, startAge, endAge, photo } = filters;
   const result = await axios
