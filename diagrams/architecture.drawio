@@ -104,8 +104,8 @@
                 <mxCell id="36" value="&lt;font color=&quot;#000000&quot;&gt;currentIndex: num&lt;br&gt;lastIndex: num&lt;br&gt;candidateCount: num&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="40" vertex="1">
                     <mxGeometry x="120" y="10" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="3. Iterate through pages and extract link to profiles" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="190" y="590" width="140" height="60" as="geometry"/>
+                <mxCell id="41" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;linkExtractor&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="175" y="590" width="170" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="389" y="680" width="120" height="30" as="geometry"/>
