@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="SZXNvtV3E4CguaLO8lRz" name="Page-1">
-        <mxGraphModel dx="730" dy="353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1047" dy="353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -76,7 +76,7 @@
                         <mxPoint x="-170" y="148.00332889480717" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="&lt;span&gt;2. Check if the same &lt;br&gt;filters as last search&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="23" value="#compareFilters" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="170" y="220" width="180" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="2.N.2 Search with filters" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
