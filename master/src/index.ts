@@ -1,9 +1,16 @@
 // fdating.com
 
+import { compareFilters } from './services/compare-filters';
 import { getParams } from './services/get-params';
 
 const baseUrl: string = 'https://fdating.com';
 const searchUrl: string = 'https://fdating.com/search?do=Search;';
 
-const userParams = getParams(process.argv.slice(2));
+const main = async (): Promise<void> => {
+  const userParams = getParams(process.argv.slice(2));
 
+  let searchParams = await compareFilters(userParams);
+  console.log(searchParams);
+};
+
+main();
