@@ -14,8 +14,12 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
 
   switch (resume) {
     case true:
-      searchIndex = parseInt(await redisClient.aGet('searchIndex'));
-      pageCount = parseInt(await redisClient.aGet('pageCount'));
+      let sI = await redisClient.aGet('searchIndex');
+      let pC = await redisClient.aGet('pageCount');
+      console.log(`search index: ${sI}`);
+      console.log(`${pC} pages to go`);
+      searchIndex = parseInt(sI);
+      searchIndex = parseInt(pC);
       console.log(`search index: ${searchIndex}`);
       console.log(`${pageCount} pages to go`);
       break;
