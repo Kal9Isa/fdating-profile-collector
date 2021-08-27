@@ -25,9 +25,14 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
       break;
   }
 
-  for (let index = searchIndex; index < pageCount; index++) {
+  let sum = 0;
+
+  for (let index = searchIndex; index < 5; index++) {
+    console.log(`current page: ${index}`);
     const searchPage = await searchSite(url, filters, index);
     const profileLinks = linkExtractor(searchPage);
+    sum += Object.keys(profileLinks).length;
+    console.log(`candidates saved: ${sum}`);
     await saveLinks(profileLinks, index);
     await redisClient.aSet('searchIndex', index.toString());
   }
