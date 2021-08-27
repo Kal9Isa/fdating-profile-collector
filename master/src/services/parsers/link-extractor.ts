@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import cheerio from 'cheerio';
 
 export const linkExtractor = (payload: AxiosResponse | void): void => {
-  let profileLinks = {};
+  let profileLinks: string[] = [];
   if (payload) {
     const html = payload.data;
     const $ = cheerio.load(html);
@@ -10,7 +10,7 @@ export const linkExtractor = (payload: AxiosResponse | void): void => {
 
     for (const item of linkList!) {
       const link = $(item).attr('href');
-      profileLinks[link!.match(/\d+/)![0]] = link!;
+      profileLinks.push(link);
     }
 
     console.log(profileLinks);
