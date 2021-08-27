@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="SZXNvtV3E4CguaLO8lRz" name="Page-1">
-        <mxGraphModel dx="1047" dy="353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1232" dy="415" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -76,23 +76,23 @@
                         <mxPoint x="-170" y="148.00332889480717" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="#compareFilters" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="23" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;compareFilters&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="170" y="220" width="180" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="2.N.2 Search with filters" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
+                <mxCell id="32" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchSite&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="260" y="460" as="sourcePoint"/>
-                        <mxPoint x="480" y="460" as="targetPoint"/>
+                        <mxPoint x="260" y="400" as="sourcePoint"/>
+                        <mxPoint x="480" y="400" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="390" y="460"/>
+                            <mxPoint x="390" y="400"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="34" value="2.N.3 Exract data about results" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="200" y="485" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="200" y="425" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="260" y="570" width="370" height="70" as="geometry"/>
+                    <mxGeometry x="260" y="510" width="370" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="38" value="2.N.4 Save results in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="40" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -105,10 +105,10 @@
                     <mxGeometry x="120" y="10" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" value="3. Iterate through pages and extract link to profiles" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="190" y="650" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="190" y="590" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="389" y="740" width="120" height="30" as="geometry"/>
+                    <mxGeometry x="389" y="680" width="120" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="3.1&amp;nbsp; Update currentIndex" style="shape=flexArrow;endArrow=classic;html=1;" parent="46" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -123,7 +123,7 @@
                     <mxGeometry y="10" width="120" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="387" y="790" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="387" y="730" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="45" value="3.2&amp;nbsp; Save links in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="48" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -138,21 +138,21 @@
                     <mxGeometry y="7.199999999999999" width="120" height="72.8" as="geometry"/>
                 </mxCell>
                 <mxCell id="52" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="260" y="360" width="370" height="70" as="geometry"/>
+                    <mxGeometry x="350" y="280" width="280" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="53" value="&lt;font color=&quot;#000000&quot;&gt;gender: num&lt;br&gt;startAge: num&lt;br&gt;endAge: num&lt;br&gt;photo: boolean&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="52" vertex="1">
-                    <mxGeometry x="130" y="10" width="110" height="60" as="geometry"/>
+                    <mxGeometry x="84.19" y="10" width="111.62" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="2.N.1 Save filters in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="52" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint as="sourcePoint"/>
-                        <mxPoint x="369.99999999999994" as="targetPoint"/>
+                        <mxPoint x="280" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="7" value="&lt;font color=&quot;#000000&quot;&gt;gender: num&lt;br&gt;startAge: num&lt;br&gt;endAge: num&lt;br&gt;photo: boolean&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
                     <mxGeometry x="100" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="#getParams" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
+                <mxCell id="22" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;getParams&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
                     <mxGeometry x="70" y="150" width="50" height="50" as="geometry">
                         <mxPoint x="70" y="150" as="sourcePoint"/>
                         <mxPoint x="260" y="150" as="targetPoint"/>
