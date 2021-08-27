@@ -9,7 +9,7 @@ const searchUrl: string = 'https://fdating.com/search?do=Search;';
 
 const main = async (): Promise<void> => {
   const userParams = getParams(process.argv.slice(2));
-  console.log(`Got user inputs`);
+  console.log(`got user inputs`);
 
   const sameFilters = await compareFilters(userParams);
   let resume = false;
