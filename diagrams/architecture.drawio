@@ -101,7 +101,7 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="36" value="&lt;font color=&quot;#000000&quot;&gt;currentIndex: num&lt;br&gt;lastIndex: num&lt;br&gt;candidateCount: num&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="40" vertex="1">
+                <mxCell id="36" value="&lt;font color=&quot;#000000&quot;&gt;pageCount: num&lt;br&gt;searchIndex: num&lt;br&gt;totalCandidates: num&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="40" vertex="1">
                     <mxGeometry x="120" y="10" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;linkExtractor&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
@@ -156,6 +156,18 @@
                     <mxGeometry x="70" y="150" width="50" height="50" as="geometry">
                         <mxPoint x="70" y="150" as="sourcePoint"/>
                         <mxPoint x="260" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="Get all links" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="110" y="810" as="sourcePoint"/>
+                        <mxPoint x="120" y="810" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="70" y="810"/>
+                            <mxPoint x="70" y="580"/>
+                            <mxPoint x="160" y="580"/>
+                            <mxPoint x="160" y="810"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
             </root>
