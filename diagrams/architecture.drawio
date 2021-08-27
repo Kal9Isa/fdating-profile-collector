@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="SZXNvtV3E4CguaLO8lRz" name="Page-1">
-        <mxGraphModel dx="1047" dy="353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1153" dy="504" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -52,6 +52,12 @@
                         <mxPoint x="100" y="311.68831168831167" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="57" value="same filters" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="28">
+                    <mxGeometry x="-40" y="610" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="new filters" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="28">
+                    <mxGeometry x="-40" y="320" width="100" height="20" as="geometry"/>
+                </mxCell>
                 <mxCell id="29" value="" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="50" y="40" width="30" height="1600" as="geometry"/>
                 </mxCell>
@@ -79,38 +85,13 @@
                 <mxCell id="23" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;compareFilters&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="170" y="220" width="180" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchSite&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="260" y="400" as="sourcePoint"/>
-                        <mxPoint x="480" y="400" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="390" y="400"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="34" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchPageParser&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="425" width="200" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="40" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="260" y="510" width="370" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="38" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;saveSearchInfo&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="40" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint as="sourcePoint"/>
-                        <mxPoint x="370" as="targetPoint"/>
-                        <Array as="points"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="36" value="&lt;font color=&quot;#000000&quot;&gt;pageCount: num&lt;br&gt;searchIndex: num&lt;br&gt;totalCandidates: num&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="40" vertex="1">
-                    <mxGeometry x="120" y="10" width="120" height="60" as="geometry"/>
-                </mxCell>
                 <mxCell id="41" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;linkExtractor&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="175" y="590" width="170" height="60" as="geometry"/>
+                    <mxGeometry x="175" y="920" width="170" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="389" y="680" width="120" height="30" as="geometry"/>
+                    <mxGeometry x="389" y="1100" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="3.1&amp;nbsp; Update currentIndex" style="shape=flexArrow;endArrow=classic;html=1;" parent="46" edge="1">
+                <mxCell id="42" value="Update currentIndex" style="shape=flexArrow;endArrow=classic;html=1;" parent="46" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-129" as="sourcePoint"/>
                         <mxPoint x="241" as="targetPoint"/>
@@ -123,9 +104,9 @@
                     <mxGeometry y="10" width="120" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="387" y="730" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="387" y="1000" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="3.2&amp;nbsp; Save links in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="48" edge="1">
+                <mxCell id="45" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;saveLinks&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="48" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-127" as="sourcePoint"/>
                         <mxPoint x="243" as="targetPoint"/>
@@ -137,18 +118,6 @@
                 <mxCell id="47" value="&lt;font color=&quot;#000000&quot;&gt;currentIndex: {&lt;br&gt;data:&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;string[],&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;processed: boolean&lt;br&gt;}&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="48" vertex="1">
                     <mxGeometry y="7.199999999999999" width="120" height="72.8" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="350" y="280" width="280" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="53" value="&lt;font color=&quot;#000000&quot;&gt;gender: num&lt;br&gt;startAge: num&lt;br&gt;endAge: num&lt;br&gt;photo: boolean&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="52" vertex="1">
-                    <mxGeometry x="84.19" y="10" width="111.62" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="54" value="2.N.1 Save filters in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="52" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint as="sourcePoint"/>
-                        <mxPoint x="280" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="7" value="&lt;font color=&quot;#000000&quot;&gt;gender: num&lt;br&gt;startAge: num&lt;br&gt;endAge: num&lt;br&gt;photo: boolean&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
                     <mxGeometry x="100" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
@@ -158,16 +127,72 @@
                         <mxPoint x="260" y="150" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="55" value="Get all links" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1">
+                <mxCell id="55" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;linkCollector&lt;/span&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="110" y="810" as="sourcePoint"/>
-                        <mxPoint x="120" y="810" as="targetPoint"/>
+                        <mxPoint x="190" y="1140" as="sourcePoint"/>
+                        <mxPoint x="200" y="1140" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="70" y="810"/>
-                            <mxPoint x="70" y="580"/>
-                            <mxPoint x="160" y="580"/>
-                            <mxPoint x="160" y="810"/>
+                            <mxPoint x="150" y="1140"/>
+                            <mxPoint x="150" y="860"/>
+                            <mxPoint x="240" y="860"/>
+                            <mxPoint x="240" y="1140"/>
                         </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchSite&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="260" y="890" as="sourcePoint"/>
+                        <mxPoint x="480" y="890" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="890"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="newFilters" parent="0"/>
+                <mxCell id="52" value="" style="group" parent="56" vertex="1" connectable="0">
+                    <mxGeometry x="260" y="400" width="370" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;font color=&quot;#000000&quot;&gt;gender: num&lt;br&gt;startAge: num&lt;br&gt;endAge: num&lt;br&gt;photo: boolean&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="52" vertex="1">
+                    <mxGeometry x="111.25107142857142" y="10" width="147.49785714285716" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Save filters in DB" style="shape=flexArrow;endArrow=classic;html=1;" parent="52" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint as="sourcePoint"/>
+                        <mxPoint x="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchPageParser&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="56" vertex="1">
+                    <mxGeometry x="160" y="465" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="group" parent="56" vertex="1" connectable="0">
+                    <mxGeometry x="260" y="550" width="370" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;saveSearchInfo&lt;/span&gt;" style="shape=flexArrow;endArrow=classic;html=1;" parent="40" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint as="sourcePoint"/>
+                        <mxPoint x="370" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="&lt;font color=&quot;#000000&quot;&gt;pageCount: num&lt;br&gt;searchIndex: num&lt;br&gt;totalCandidates: num&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="40" vertex="1">
+                    <mxGeometry x="120" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Get pageCount" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="56">
+                    <mxGeometry x="255" y="750" width="50" height="50" as="geometry">
+                        <mxPoint x="625" y="750" as="sourcePoint"/>
+                        <mxPoint x="255" y="750" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="Get searchIndex" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="56">
+                    <mxGeometry x="255" y="700" width="50" height="50" as="geometry">
+                        <mxPoint x="625" y="700" as="sourcePoint"/>
+                        <mxPoint x="255" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="Get filters" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="56">
+                    <mxGeometry x="255" y="850" width="50" height="50" as="geometry">
+                        <mxPoint x="624.9999999999998" y="850" as="sourcePoint"/>
+                        <mxPoint x="255" y="850" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
