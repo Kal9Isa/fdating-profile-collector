@@ -20,7 +20,7 @@ const main = async (): Promise<void> => {
   let searchPage = await searchSite(searchUrl, searchParams);
   // let searchInfo: SearchInfo = searchPageParser(searchPage);
   // saveSearchInfo(searchInfo);
-  linkExtractor(searchPage);
+  console.log(linkExtractor(searchPage));
 };
 
 main();
