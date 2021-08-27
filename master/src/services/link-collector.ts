@@ -10,18 +10,25 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
   let searchIndex: number, pageCount: number;
   const filters: fdatingParams = await redisClient.aGet('filters');
 
+  console.log(`filters loaded`);
+
   switch (resume) {
     case true:
       searchIndex = parseInt(await redisClient.aGet('searchIndex'));
       pageCount = parseInt(await redisClient.aGet('pageCount'));
+      console.log(`search index: ${searchIndex}`);
+      console.log(`${pageCount} pages to go`);
       break;
 
     default:
       const searchPage = await searchSite(url, filters, 1);
+      console.log(`grabbing search results`);
       let searchInfo: SearchInfo = searchPageParser(searchPage);
       await saveSearchInfo(searchInfo);
       searchIndex = searchInfo.searchIndex;
       pageCount = searchInfo.pageCount;
+      console.log(`search index: ${searchIndex}`);
+      console.log(`${pageCount} pages to go`);
       break;
   }
 
