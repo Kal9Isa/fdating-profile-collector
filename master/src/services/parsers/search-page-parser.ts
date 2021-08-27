@@ -1,6 +1,7 @@
+import { AxiosResponse } from 'axios';
 import cheerio from 'cheerio';
 
-export const searchPageParser = (payload) => {
+export const searchPageParser = (payload: AxiosResponse) => {
   const html = payload.data;
   const $ = cheerio.load(html);
   const searchInfo = $('.c-block > .inner > center > div').text();
