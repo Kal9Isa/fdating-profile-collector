@@ -4,7 +4,7 @@ import cheerio from 'cheerio';
 export const searchPageParser = (payload: AxiosResponse) => {
   const html = payload.data;
   const $ = cheerio.load(html);
-  const searchInfo = $('.c-block > .inner > center > div').text();
+  const searchInfo = $('.c-block > .inner > center > div > b');
 
   console.log(searchInfo);
 };
