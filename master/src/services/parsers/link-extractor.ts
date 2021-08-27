@@ -8,13 +8,11 @@ export const linkExtractor = (payload: AxiosResponse | void): void => {
     const $ = cheerio.load(html);
     const linkList = $('.c-block > .inner > center > ul > li > .image');
 
-    if (linkList) {
-      for (const item of linkList) {
-        const link = $(item).attr('href');
-        profileLinks[link.match(/\d+/)[0]] = link;
-      }
-
-      console.log(profileLinks);
+    for (const item of linkList!) {
+      const link = $(item).attr('href');
+      profileLinks[link!.match(/\d+/)[0]] = link!;
     }
+
+    console.log(profileLinks);
   }
 };
