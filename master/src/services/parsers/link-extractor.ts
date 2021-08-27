@@ -5,7 +5,7 @@ export const linkExtractor = (payload: AxiosResponse | void): void => {
   if (payload) {
     const html = payload.data;
     const $ = cheerio.load(html);
-    const linkList = $('.c-block > .inner > center > ul > li');
+    const linkList = $('.c-block > .inner > center > ul > li > .image');
 
     console.log(linkList);
     if (linkList) {
