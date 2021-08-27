@@ -19,7 +19,7 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
       console.log(`search index: ${sI}`);
       console.log(`${pC} pages to go`);
       searchIndex = parseInt(sI);
-      searchIndex = parseInt(pC);
+      pageCount = parseInt(pC);
       console.log(`search index: ${searchIndex}`);
       console.log(`${pageCount} pages to go`);
       break;
@@ -38,7 +38,7 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
 
   let sum = 0;
 
-  for (let index = searchIndex; index < 2; index++) {
+  for (let index = searchIndex; index < 5; index++) {
     console.log(`current page: ${index}`);
     const searchPage = await searchSite(url, filters, index);
     const profileLinks = linkExtractor(searchPage);
