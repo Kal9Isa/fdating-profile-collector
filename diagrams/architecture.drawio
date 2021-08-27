@@ -88,8 +88,8 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="34" value="2.N.3 Exract data about results" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-                    <mxGeometry x="200" y="425" width="120" height="60" as="geometry"/>
+                <mxCell id="34" value="#&lt;span style=&quot;color: rgb(255 , 198 , 109) ; background-color: rgb(36 , 36 , 36) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;searchPageParser&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="425" width="200" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="260" y="510" width="370" height="70" as="geometry"/>
