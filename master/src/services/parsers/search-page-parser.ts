@@ -1,7 +1,13 @@
 import { AxiosResponse } from 'axios';
 import cheerio from 'cheerio';
 
-export const searchPageParser = (payload: AxiosResponse) => {
+interface SearchInfo {
+  totalCandidates: number;
+  searchIndex: number;
+  pageCount: number;
+}
+
+export const searchPageParser = (payload: AxiosResponse): SearchInfo => {
   const html = payload.data;
   const $ = cheerio.load(html);
   const searchInfo = $('.c-block > .inner > center > div > b');
@@ -14,18 +20,9 @@ export const searchPageParser = (payload: AxiosResponse) => {
 
   resultInfo = [...new Set(resultInfo)];
 
-  console.log(resultInfo);
+  return {
+    totalCandidates: resultInfo[0],
+    searchIndex: resultInfo[1],
+    pageCount: resultInfo[2],
+  };
 };
-
-// let links = [];
-//   const html = payload.data;
-//   const $ = cheerio.load(html);
-//   const forecastDays = $('.monthly-daypanel');
-
-//   // Extract links to all daily forecasts available on the page
-//   forecastDays.each(function () {
-//     let link = $(this).attr('href');
-//     if (link) links.push(link);
-//   });
-
-//   return links;
