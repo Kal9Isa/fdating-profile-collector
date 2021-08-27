@@ -6,7 +6,10 @@ export const searchPageParser = (payload: AxiosResponse) => {
   const $ = cheerio.load(html);
   const searchInfo = $('.c-block > .inner > center > div > b');
 
-  console.log(searchInfo);
+  for (const item of searchInfo) {
+    let value = $(item).text();
+    console.log(value);
+  }
 };
 
 // let links = [];
