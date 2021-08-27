@@ -11,8 +11,9 @@ const main = async (): Promise<void> => {
   const userParams = getParams(process.argv.slice(2));
 
   const sameFilters = await compareFilters(userParams);
-
-  if (sameFilters) linkCollector(searchUrl, true);
+  let resume = false;
+  if (sameFilters) resume = true;
+  linkCollector(searchUrl, resume);
 };
 
 main();
