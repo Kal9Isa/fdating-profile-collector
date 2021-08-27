@@ -1,6 +1,6 @@
 import minimist from 'minimist';
 
-interface fdatingParams {
+export interface fdatingParams {
   gender: number;
   startAge: number;
   endAge: number;
