@@ -16,11 +16,11 @@ const searchUrl: string = 'https://fdating.com/search?do=Search;';
 const main = async (): Promise<void> => {
   const userParams = getParams(process.argv.slice(2));
 
-  let searchParams = await compareFilters(userParams);
-  let searchPage = await searchSite(searchUrl, searchParams);
+  const searchParams = await compareFilters(userParams);
+  const searchPage = await searchSite(searchUrl, searchParams);
   // let searchInfo: SearchInfo = searchPageParser(searchPage);
   // saveSearchInfo(searchInfo);
-  console.log(linkExtractor(searchPage));
+  const profileLinks = linkExtractor(searchPage);
 };
 
 main();
