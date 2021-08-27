@@ -10,7 +10,7 @@ export const linkExtractor = (payload: AxiosResponse | void): void => {
 
     for (const item of linkList!) {
       const link = $(item).attr('href');
-      profileLinks.push(link);
+      profileLinks.push(link!);
     }
 
     console.log(profileLinks);
