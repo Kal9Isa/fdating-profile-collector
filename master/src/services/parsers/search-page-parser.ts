@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import cheerio from 'cheerio';
 
-interface SearchInfo {
+export interface SearchInfo {
   totalCandidates: number;
   searchIndex: number;
   pageCount: number;

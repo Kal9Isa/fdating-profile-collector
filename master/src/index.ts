@@ -11,7 +11,7 @@ const main = async (): Promise<void> => {
   const userParams = getParams(process.argv.slice(2));
 
   let searchParams = await compareFilters(userParams);
-  let data = searchSite(searchUrl, searchParams);
+  let data = await searchSite(searchUrl, searchParams);
   console.log(data);
 };
 
