@@ -2,7 +2,7 @@ import { Queue, QueueEvents } from 'bullmq';
 
 const profileQueue: Queue = new Queue('getProfiles', {
   connection: {
-    host: '194.5.207.227',
+    host: 'localhost',
     port: 32200,
   },
   defaultJobOptions: {
