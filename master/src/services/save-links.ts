@@ -23,12 +23,12 @@ const queueEvents: QueueEvents = new QueueEvents('getProfiles', {
   },
 });
 
-queueEvents.on('completed', (jobId: string) => {
-  console.log(`profile ${jobId} retrieved`);
+queueEvents.on('completed', (res) => {
+  console.log(`profile ${res.jobId} retrieved`);
 });
 
-queueEvents.on('added', (jobId: string) => {
-  console.log(`saving ${jobId} as a job`);
+queueEvents.on('added', (res) => {
+  console.log(`saving ${res.jobId} as a job`);
 });
 
 export const saveLinks = async (links: object): Promise<void> => {
