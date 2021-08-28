@@ -28,7 +28,7 @@ queueEvents.on('completed', (res) => {
 });
 
 queueEvents.on('added', (res) => {
-  console.log(`saving ${res.jobId} as a job`);
+  console.log(`saving ${res.jobId}: ${res.data} as a job`);
 });
 
 export const saveLinks = async (links: object): Promise<void> => {
