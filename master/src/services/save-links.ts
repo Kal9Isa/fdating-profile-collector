@@ -2,7 +2,7 @@ import { Queue, QueueEvents } from 'bullmq';
 
 const profileQueue: Queue = new Queue('getProfiles', {
   connection: {
-    host: 'localhost',
+    host: '194.5.207.227',
     port: 32200,
   },
   defaultJobOptions: {
@@ -24,9 +24,9 @@ queueEvents.on('completed', (jobId: string) => {
 
 export const saveLinks = async (links: object): Promise<void> => {
   Object.keys(links).forEach(async (key) => {
-    await profileQueue.add(key, links, {
+    let job = await profileQueue.add(key, links, {
       jobId: key,
     });
-    console.log(`saving ${key} as a job`);
+    console.log(`saving ${job.id} as a job`);
   });
 };
