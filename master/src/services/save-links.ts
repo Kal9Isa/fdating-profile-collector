@@ -33,7 +33,7 @@ queueEvents.on('added', (res) => {
 
 export const saveLinks = async (links: object): Promise<void> => {
   Object.keys(links).forEach(async (key) => {
-    await profileQueue.add(key, links, {
+    await profileQueue.add(key, links[key], {
       jobId: key,
     });
   });
