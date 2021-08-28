@@ -10,24 +10,38 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
   let searchIndex: number, pageCount: number;
   const filters: fdatingParams = await redisClient.aGet('filters');
 
+  console.log(`filters loaded`);
+
   switch (resume) {
     case true:
-      searchIndex = parseInt(await redisClient.aGet('searchIndex'));
-      pageCount = parseInt(await redisClient.aGet('pageCount'));
+      let sI = await redisClient.aGet('searchIndex');
+      let pC = await redisClient.aGet('pageCount');
+      searchIndex = parseInt(sI);
+      pageCount = parseInt(pC);
+      console.log(`search index: ${searchIndex}`);
+      console.log(`${pageCount} pages to go`);
       break;
 
     default:
       const searchPage = await searchSite(url, filters, 1);
+      console.log(`grabbing search results`);
       let searchInfo: SearchInfo = searchPageParser(searchPage);
       await saveSearchInfo(searchInfo);
       searchIndex = searchInfo.searchIndex;
       pageCount = searchInfo.pageCount;
+      console.log(`search index: ${searchIndex}`);
+      console.log(`${pageCount} pages to go`);
       break;
   }
 
-  for (let index = searchIndex; index < pageCount; index++) {
+  let sum = 0 + searchIndex * 12;
+
+  for (let index = searchIndex; index < 20; index++) {
+    console.log(`current page: ${index}`);
     const searchPage = await searchSite(url, filters, index);
     const profileLinks = linkExtractor(searchPage);
+    sum += Object.keys(profileLinks).length;
+    console.log(`candidates saved: ${sum}`);
     await saveLinks(profileLinks, index);
     await redisClient.aSet('searchIndex', index.toString());
   }
