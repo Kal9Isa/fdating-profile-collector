@@ -52,6 +52,8 @@ To meet problem's 2nd requirements, we have utilized [BullMQ](https://docs.bullm
 
 Then folders must be created in a _data_ folder inside _worker_ directory
 
+> Once the auto-deployment is setup, the option of true horizontal scale would be unlocked as you can spin up multiple workers to increase speed of the solution!
+
 ## Performance
 
 TBT
