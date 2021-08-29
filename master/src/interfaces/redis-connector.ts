@@ -1,5 +1,8 @@
 import redis, { RedisClient } from 'redis';
 import { promisify } from 'util';
+import config from '../../../app.config';
+
+const { redisUrl, redisPort } = config;
 
 interface KVClient {
   aGet(key: string): Promise<object>;
@@ -7,7 +10,7 @@ interface KVClient {
 }
 
 class RedisInterface implements KVClient {
-  client: RedisClient = redis.createClient('redis://194.5.207.227:32200');
+  client: RedisClient = redis.createClient(`redis://${redisUrl}:${redisPort}`);
 
   constructor() {}
 
