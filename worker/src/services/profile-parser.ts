@@ -6,5 +6,10 @@ export const profileParser = (payload: AxiosResponse) => {
   const html = payload!.data;
   const $ = cheerio.load(html);
   const profileTable = $('.profile-tbl > tbody > tr');
-  console.log(Object.keys(profileTable).length);
+
+  for (const item of profileTable) {
+    const key = $(item).find('th').text();
+    const value = $(item).find('td').text();
+    console.log(`${key}: ${value}`);
+  }
 };
