@@ -18,7 +18,7 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
       let pC = await redisClient.aGet('pageCount');
       searchIndex = parseInt(sI);
       pageCount = parseInt(pC);
-      console.log(`${pageCount} pages to go`);
+      console.log(`resume> ${pageCount} pages to go`);
       break;
 
     default:
@@ -28,7 +28,7 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
       await saveSearchInfo(searchInfo);
       searchIndex = searchInfo.searchIndex;
       pageCount = searchInfo.pageCount;
-      console.log(`${pageCount} pages to go`);
+      console.log(`new> ${pageCount} pages to go`);
       break;
   }
 
@@ -37,11 +37,13 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
 
   for (let index = searchIndex; index < 3; index++) {
     console.log(`current page: ${index}`);
+    console.log(`candidates saved: ${sum}`);
+
     const searchPage = await searchSite(url, filters, index);
     const profileLinks = linkExtractor(searchPage);
 
-    console.log(`candidates saved: ${sum}`);
     sum += Object.keys(profileLinks).length;
+
     await saveLinks(profileLinks);
     await redisClient.aSet('searchIndex', index.toString());
   }

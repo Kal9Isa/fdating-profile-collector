@@ -2,9 +2,9 @@
   "name": "fdating-profile-collector",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/Kal9Isa/fdating-profile-collector#readme",
   "dependencies": {
+    "@types/fs-extra": "^9.0.12",
     "axios": "^0.21.1",
     "bullmq": "^1.44.0",
     "cheerio": "^1.0.0-rc.10",
-    "dotenv": "^10.0.0"
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.30",

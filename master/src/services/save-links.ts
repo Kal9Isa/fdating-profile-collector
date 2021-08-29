@@ -1,9 +1,12 @@
 import { Queue, QueueEvents, QueueScheduler } from 'bullmq';
+import config from '../../../app.config';
+
+const { redisUrl, redisPort } = config;
 
 const profileQueue: Queue = new Queue('test', {
   connection: {
-    host: '194.5.207.227',
-    port: 32200,
+    host: redisUrl,
+    port: redisPort,
   },
   defaultJobOptions: {
     removeOnComplete: true,
@@ -18,20 +21,20 @@ const profileQueue: Queue = new Queue('test', {
 
 const queueEvents: QueueEvents = new QueueEvents('test', {
   connection: {
-    host: '194.5.207.227',
-    port: 32200,
+    host: redisUrl,
+    port: redisPort,
   },
 });
 
 const queueScheduler = new QueueScheduler('test', {
   connection: {
-    host: '194.5.207.227',
-    port: 32200,
+    host: redisUrl,
+    port: redisPort,
   },
 });
 
 queueEvents.on('completed', (res) => {
-  console.log(`profile ${res.jobId} retrieved`);
+  console.log(`profile ${res.jobId} saved!`);
 });
 
 queueEvents.on('added', (res) => {
