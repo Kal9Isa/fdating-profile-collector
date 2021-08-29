@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/Kal9Isa/fdating-profile-collector#readme",
   "dependencies": {
+    "@types/fs-extra": "^9.0.12",
     "axios": "^0.21.1",
     "bullmq": "^1.44.0",
-    "cheerio": "^1.0.0-rc.10"
+    "cheerio": "^1.0.0-rc.10",
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.30",
