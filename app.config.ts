@@ -1,6 +1,6 @@
 export default {
-  redisUrl: '194.5.207.227',
-  redisPort: 32200,
+  redisUrl: 'localhost',
+  redisPort: 6379,
   maxJobInInterval: 1,
   interval: 10000,
   channelName: 'profiles',
