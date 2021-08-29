@@ -8,8 +8,8 @@ export const profileParser = (payload: AxiosResponse) => {
   const profileTable = $('.profile-tbl > tbody > tr');
 
   for (const item of profileTable) {
-    const key = $(item).find('th').text();
-    const value = $(item).find('td').text();
+    const key = $(item).find('th').text().trim();
+    const value = $(item).find('td').text().trim();
     console.log(`${key}: ${value}`);
   }
 };
