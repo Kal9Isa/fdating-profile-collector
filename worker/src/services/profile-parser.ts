@@ -23,7 +23,6 @@ interface UserProfile {
   languages: string;
 }
 
-// Parse profile data returned by axios
 export const profileParser = (payload: AxiosResponse) => {
   let user = {};
   const html = payload!.data;
@@ -36,9 +35,9 @@ export const profileParser = (payload: AxiosResponse) => {
     user[key] = value;
   }
 
-  // TODO extract photo link
-  const userName = $('.user-photo').find('img').attr('src');
+  const imageLink = $('.user-photo').find('img').attr('src');
+  if (imageLink) user['image'] = imageLink;
   // TODO extract name
 
-  console.log(userName);
+  console.log(JSON.stringify(user));
 };
