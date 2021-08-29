@@ -14,18 +14,18 @@ const main = async (): Promise<void> => {
     },
   });
 
-  worker.on('drained', async () => {
-    console.log('No jobs left');
-    await worker.close();
-  });
+  // worker.on('drained', async () => {
+  //   console.log('No jobs left');
+  //   await worker.close();
+  // });
 
-  worker.on('error', (err) => {
-    console.error(err);
-  });
+  // worker.on('error', (err) => {
+  //   console.error(err);
+  // });
 
-  process.on('SIGINT', async () => {
-    await worker.close();
-  });
+  // process.on('SIGINT', async () => {
+  //   await worker.close();
+  // });
 };
 
 main();

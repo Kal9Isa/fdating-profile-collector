@@ -35,7 +35,7 @@ export const linkCollector = async (url: string, resume: boolean = false) => {
   console.log(`searchIndex: ${searchIndex}`);
   let sum = 0 + searchIndex * 12;
 
-  for (let index = searchIndex; index < 2; index++) {
+  for (let index = searchIndex; index < 5; index++) {
     console.log(`current page: ${index}`);
     const searchPage = await searchSite(url, filters, index);
     const profileLinks = linkExtractor(searchPage);
