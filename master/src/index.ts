@@ -1,23 +1,11 @@
-// fdating.com
+import { app } from './app';
+import config from '../../app.config';
 
-import { compareFilters } from './services/compare-filters';
-import { getParams } from './services/get-params';
-import { linkCollector } from './services/link-collector';
+const main = () => {
+  if (!!!config.redisUrl) throw new Error('Redis URL not set');
+  if (!!!config.redisPort) throw new Error('Redis port not set');
 
-const baseUrl: string = 'https://fdating.com';
-const searchUrl: string = 'https://fdating.com/search?do=Search;';
-
-const main = async (): Promise<void> => {
-  const userParams = getParams(process.argv.slice(2));
-  console.log(`got user inputs`);
-
-  const sameFilters = await compareFilters(userParams);
-  let resume = false;
-  if (sameFilters) {
-    resume = true;
-    console.log(`resume of operation`);
-  }
-  linkCollector(searchUrl, resume);
+  app();
 };
 
 main();
