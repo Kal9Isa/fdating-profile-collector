@@ -1,4 +1,6 @@
 import { Worker, Job } from 'bullmq';
+import config from '../../app.config';
+import { getProfilePage } from './services/get-profile-page';
 
 export const app = async () => {
   const baseUrl: string = 'https://fdating.com';
@@ -6,16 +8,17 @@ export const app = async () => {
   const worker = new Worker(
     'test',
     async (job: Job) => {
-      console.log(`sending req to ${baseUrl}${job.data}`);
+      console.log(`processing ${baseUrl}${job.data}`);
+      getProfilePage(`${baseUrl}${job.data}`);
     },
     {
       connection: {
-        host: '194.5.207.227',
-        port: 32200,
+        host: config.redisUrl,
+        port: config.redisPort,
       },
       limiter: {
-        max: 1,
-        duration: 1000,
+        max: config.maxJobInInterval,
+        duration: config.interval,
       },
     }
   );
