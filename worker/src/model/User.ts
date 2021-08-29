@@ -18,9 +18,10 @@ export interface UserProfile {
   smoking: string;
   drinking: string;
   languages: string;
+  image: string;
 }
 
-export class User {
+export class User implements UserProfile {
   profileId = '';
   registered = '';
   updated = '';
@@ -40,6 +41,7 @@ export class User {
   smoking = '';
   drinking = '';
   languages = '';
+  image = '';
 
   constructor() {}
 }
