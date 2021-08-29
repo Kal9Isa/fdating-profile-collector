@@ -3,4 +3,5 @@ export default {
   redisPort: 32200,
   maxJobInInterval: 1,
   interval: 10000,
+  channelName: 'profiles',
 };
