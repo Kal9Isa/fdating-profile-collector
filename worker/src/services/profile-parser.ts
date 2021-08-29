@@ -35,5 +35,10 @@ export const profileParser = (payload: AxiosResponse) => {
     const value = $(item).find('td').text().trim();
     user[key] = value;
   }
-  console.log(JSON.stringify(user));
+
+  // TODO extract photo link
+  // TODO extract name
+  const userName = $('.user-page').find('h4').text().trim();
+
+  console.log(userName);
 };
