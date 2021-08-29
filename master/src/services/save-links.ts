@@ -1,6 +1,6 @@
-import { Queue, QueueEvents } from 'bullmq';
+import { Queue, QueueEvents, QueueScheduler } from 'bullmq';
 
-const profileQueue: Queue = new Queue('getProfiles', {
+const profileQueue: Queue = new Queue('test', {
   connection: {
     host: '194.5.207.227',
     port: 32200,
@@ -16,7 +16,14 @@ const profileQueue: Queue = new Queue('getProfiles', {
   },
 });
 
-const queueEvents: QueueEvents = new QueueEvents('getProfiles', {
+const queueEvents: QueueEvents = new QueueEvents('test', {
+  connection: {
+    host: '194.5.207.227',
+    port: 32200,
+  },
+});
+
+const queueScheduler = new QueueScheduler('test', {
   connection: {
     host: '194.5.207.227',
     port: 32200,
@@ -38,3 +45,7 @@ export const saveLinks = async (links: object): Promise<void> => {
     });
   });
 };
+
+process.on('SIGINT', async () => {
+  await queueScheduler.close();
+});

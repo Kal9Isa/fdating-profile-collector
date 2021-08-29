@@ -1,7 +1,7 @@
 import { Worker } from 'bullmq';
 import path from 'path';
 
-const main = async (): Promise<void> => {
+const main = (): void => {
   const processorFile = path.join(__dirname, 'processor.ts');
   const worker: Worker = new Worker('getProfiles', processorFile, {
     connection: {
@@ -14,18 +14,18 @@ const main = async (): Promise<void> => {
     },
   });
 
-  // worker.on('drained', async () => {
-  //   console.log('No jobs left');
-  //   await worker.close();
-  // });
+  worker.on('drained', async () => {
+    console.log('No jobs left');
+    await worker.close();
+  });
 
   // worker.on('error', (err) => {
   //   console.error(err);
   // });
 
-  // process.on('SIGINT', async () => {
-  //   await worker.close();
-  // });
+  process.on('SIGINT', async () => {
+    await worker.close();
+  });
 };
 
 main();
