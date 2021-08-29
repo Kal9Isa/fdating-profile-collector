@@ -11,7 +11,8 @@ export const app = async () => {
     async (job: Job) => {
       console.log(`processing ${baseUrl}${job.data}`);
       const profilePage = await getProfilePage(`${baseUrl}${job.data}`);
-      profileParser(profilePage);
+      const data = profileParser(profilePage);
+      console.log(data);
     },
     {
       connection: {

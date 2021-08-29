@@ -1,30 +1,9 @@
 import { AxiosResponse } from 'axios';
 import cheerio from 'cheerio';
+import { User, UserProfile } from '../model/User';
 
-interface UserProfile {
-  profileId: string;
-  registered: string;
-  updated: string;
-  lastLogged: string;
-  name: string;
-  country: string;
-  state: string;
-  city: string;
-  maritalStatus: string;
-  age: string;
-  zodiac: string;
-  height: string;
-  weight: string;
-  hairColor: string;
-  eyeColor: string;
-  children: string;
-  smoking: string;
-  drinking: string;
-  languages: string;
-}
-
-export const profileParser = (payload: AxiosResponse) => {
-  let user = {};
+export const profileParser = (payload: AxiosResponse): UserProfile => {
+  const user = new User();
   const html = payload!.data;
   const $ = cheerio.load(html);
   const profileTable = $('.profile-tbl > tbody > tr');
@@ -39,5 +18,5 @@ export const profileParser = (payload: AxiosResponse) => {
   if (imageLink) user['image'] = imageLink;
   // TODO extract name
 
-  console.log(JSON.stringify(user));
+  return user;
 };
