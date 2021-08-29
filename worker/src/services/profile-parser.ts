@@ -37,8 +37,8 @@ export const profileParser = (payload: AxiosResponse) => {
   }
 
   // TODO extract photo link
+  const userName = $('.user-photo').find('img').attr('src');
   // TODO extract name
-  const userName = $('.user-page').find('h4').text();
 
   console.log(userName);
 };
